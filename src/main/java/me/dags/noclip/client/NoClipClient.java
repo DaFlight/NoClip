@@ -31,7 +31,7 @@ public class NoClipClient {
     public static void sendNoClipData() {
         ByteBuf buf = Unpooled.buffer().writeBoolean(NoClipClient.getNoClipData().noClip());
         CPacketCustomPayload payload = new CPacketCustomPayload(EntityNoClipper.NOCLIP_CHANNEL, new PacketBuffer(buf));
-        Minecraft.getMinecraft().thePlayer.connection.sendPacket(payload);
+        Minecraft.getMinecraft().player.connection.sendPacket(payload);
     }
 
     public static NoClipData getNoClipData() {

@@ -48,11 +48,12 @@ public abstract class MixinEntityPlayer extends EntityLivingBase implements Enti
     }
 
     @Override
-    public void moveEntity(double x, double y, double z) {
+    public void travel(float x, float y, float z) {
         if (getNoClipData().noClip() && getCapabilities().isFlying) {
             this.noClip = true;
+
         }
-        super.moveEntity(x, y, z);
+        super.travel(x, y, z);
     }
 
     private PlayerCapabilities getCapabilities() {

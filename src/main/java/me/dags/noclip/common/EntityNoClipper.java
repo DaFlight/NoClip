@@ -8,4 +8,5 @@ public interface EntityNoClipper {
     String NOCLIP_CHANNEL = "NOCLIP";
 
     NoClipData getNoClipData();
+
 }

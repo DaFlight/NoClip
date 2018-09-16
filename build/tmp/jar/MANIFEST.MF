@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: NoClip
+Implementation-Version: 1.2-mc1.12.2
+TweakVersion: 1.2-mc1.12.2
+Built-By: ForgeGradle
+TweakName: NoClip
+TweakAuthor: dags
+TweakClass: me.dags.noclip.launch.NoClipLoaderTweaker
+Implementation-Vendor: dags
+

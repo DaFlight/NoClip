@@ -27,6 +27,6 @@ public class MixinNetHandlerServer {
     }
 
     private EntityNoClipper getNoClipPlayer() {
-        return EntityNoClipper.class.cast(getNetHandler().playerEntity);
+        return EntityNoClipper.class.cast(getNetHandler().player);
     }
 }
