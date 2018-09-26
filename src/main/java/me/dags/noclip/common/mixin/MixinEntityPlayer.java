@@ -3,6 +3,7 @@ package me.dags.noclip.common.mixin;
 import me.dags.noclip.common.EntityNoClipper;
 import me.dags.noclip.common.NoClipData;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.MoverType;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.PlayerCapabilities;
 import net.minecraft.world.World;
@@ -48,11 +49,12 @@ public abstract class MixinEntityPlayer extends EntityLivingBase implements Enti
     }
 
     @Override
-    public void moveEntity(double x, double y, double z) {
+    public void move(MoverType type, double x, double y, double z) {
         if (getNoClipData().noClip() && getCapabilities().isFlying) {
             this.noClip = true;
+
         }
-        super.moveEntity(x, y, z);
+        super.move(type, x, y, z);
     }
 
     private PlayerCapabilities getCapabilities() {
